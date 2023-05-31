@@ -1,0 +1,44 @@
+<!Doctype html>
+<html>
+  <head>
+    <style>
+    /* h1{ 
+        font-size: 48px;
+        font-family:roboto;
+        font-weight:normal;
+        text-align:center;
+        color: rgb(100, 100, 100);;
+      } */
+      #banner{
+        width:100%;
+        height:320px;
+        object-fit:cover;
+      }
+    </style>
+    
+    <title>Jovian careeers</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+    <h1 class="text-center mt-2 mb-4">{{company_name}} Careers</h1>
+    <img  class="img-fluid" id="banner" src="static/bner.webp " height="320">
+    <h2 class="text-center mt-2 mb-4">About Jovian</h2>
+    <p class="lead">
+      At Jovian, we’re on a mission to build the most highly reputed technical university in the world, and we’re building it completely online. Our flagship data science program helps working professionals with a background in programming or analytics make a career transition to data science. We also offer several free beginner-friendly courses and have a fast-growing community of 200,000+ users.
+   
+    </p>
+    <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+    <div>
+      {% for job in jobs %}
+      {% include 'jobitem.html'%}
+      {% endfor %}
+    </div>
+      <div class="text-center">
+    <button class="btn btn-primary btn-lg">contact us</button>
+        <p>Copyrights 2022 @Jovian</p>
+      </div>
+      </div>
+  </body>
+</html>
+  
